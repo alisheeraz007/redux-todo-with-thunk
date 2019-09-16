@@ -1,0 +1,238 @@
+body{
+    height: 100vh;
+    width: 100%;
+    background: #356396; 
+    background: -moz-linear-gradient(to bottom,  #356396 0%,#c8def5 100%); 
+    background: -webkit-linear-gradient(to bottom,  #356396 0%,#c8def5 100%); 
+    background: linear-gradient(to bottom,  #356396 0%,#c8def5 100%);
+    background-attachment: fixed;
+}
+.header p {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 29px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+.inputDiv{
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,0);
+    max-width: 600px;
+}
+.inputDiv input{
+    width: 50%;
+    height: 35px;
+    margin: 5px;
+    padding-left: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 0.3s ease-out;
+}
+.inputDiv input:focus{
+    outline: none;
+    font-size: 17px;
+    border: 1px solid steelblue;
+}
+.inputDiv button{
+    width: 51%;
+    height: 35px;
+    margin-top: 10px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    border: none;
+    background-color: steelblue;
+    color: white;
+    border-radius: 5px; 
+}
+.typing_loader{
+    position: absolute;
+    top: 45%;
+    transform: translate((-50%,-50%));
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    -webkit-animation: typing 1s linear infinite alternate;
+       -moz-animation: Typing 1s linear infinite alternate;
+       -ms-animation: Typing 1s linear infinite alternate;
+            animation: typing 1s linear infinite alternate;
+    margin: 46px auto; /* Not necessary- its only for layouting*/
+    position: relative;
+    left: -12px;
+}
+@-webkit-keyframes typing{
+    0%{
+        background-color: rgba(255,255,255, 1);
+        box-shadow: 17px 0px 0px 0px rgba(255,255,255,0.2),
+                    34px 0px 0px 0px rgba(255,255,255,0.2);
+      }
+    25%{
+        background-color: rgba(255,255,255, 0.4);
+        box-shadow: 17px 0px 0px 0px rgba(255,255,255,2),
+                    34px 0px 0px 0px rgba(255,255,255,0.2);
+    }
+    75%{ background-color: rgba(255,255,255, 0.4);
+        box-shadow: 17px 0px 0px 0px rgba(255,255,255,0.2),
+                    34px 0px 0px 0px rgba(255,255,255,1);
+      }
+}
+
+@-moz-keyframes typing{
+   0%{
+        background-color: rgba(255,255,255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.2),
+                    24px 0px 0px 0px rgba(255,255,255,0.2);
+      }
+    25%{
+        background-color: rgba(255,255,255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,2),
+                    24px 0px 0px 0px rgba(255,255,255,0.2);
+    }
+    75%{ background-color: rgba(255,255,255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.2),
+                    24px 0px 0px 0px rgba(255,255,255,1);
+      }
+}
+@-ms-keyframes typing{
+   0%{
+        background-color: rgba(255,255,255, 1);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.2),
+                    24px 0px 0px 0px rgba(255,255,255,0.2);
+      }
+    25%{
+        background-color: rgba(255,255,255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,2),
+                    24px 0px 0px 0px rgba(255,255,255,0.2);
+    }
+    75%{ background-color: rgba(255,255,255, 0.4);
+        box-shadow: 12px 0px 0px 0px rgba(255,255,255,0.2),
+                    24px 0px 0px 0px rgba(255,255,255,1);
+      }
+}
+
+@keyframes typing{
+   0%{
+        background-color: steelblue;
+        box-shadow: 17px 0px 0px 0px rgba(255,255,255,0.2),
+                    34px 0px 0px 0px rgba(255,255,255,0.2);
+      }
+    25%{
+        background-color: rgba(255,255,255, 0.4);
+        box-shadow: 17px 0px 0px 0px steelblue,
+                    34px 0px 0px 0px rgba(255,255,255,0.2);
+    }
+    75%{ background-color: rgba(255,255,255, 0.4);
+        box-shadow: 17px 0px 0px 0px rgba(255,255,255,0.2),
+                    34px 0px 0px 0px steelblue
+      }
+}
+.adminPasscodeInputDiv{
+    position: fixed;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 99, 150, 0.86);
+    z-index: 5;
+}
+
+.listDiv{
+    overflow-y: scroll;
+    font-size: 27px;
+    max-width: 364px;
+    color: white;
+    background-color: #6990b7;
+    border: 1px solid #1F4C76;
+    padding: 8px;
+    width: 70%;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 5px;
+    max-height: 400px;
+}
+.listDiv p{
+    margin: 2px;
+    border-bottom: 1px solid #1F4C76;
+}
+.listDiv p button{
+    margin: 2px;
+    padding: 5px;
+    border: 1px solid #1F4C76;
+    font-family: cursive;
+    font-weight: bold;
+    float: right;
+}
+.detaiDiv{
+    height: 192px;
+    max-height: 500px;
+    max-width: 435px;
+    width: 80%;
+    padding: 15px;
+    position: absolute;
+    top: 35%;
+    background-color: #487aa3;
+    left: 50%;
+    transform: translate(-50%,0);
+    border-radius: 12px;
+    text-align: center;
+    color: #d5def0;
+}
+table{
+    width: 92%;
+    letter-spacing: 1px;
+    padding: 15px;
+    padding-left: 0;
+    overflow-x: scroll;
+    color: #012244;
+    margin: 50px;
+    margin-top: 20px !important;
+}
+table th{
+    text-align: left;
+    border-bottom: 1px solid #1F4C76;
+}
+table td{
+    text-align: left;
+    border-bottom: 1px solid #1F4C76;
+}
+.detaiDiv p {
+    margin: 0;
+}
+table button{
+    letter-spacing: 2px;
+    color: #d5def0;
+    border: none;
+    padding: 5px;
+    margin: 3px;
+    background-color: #012244;
+    width: 75px;
+    border-radius: 5px;
+}
+.dropToDelete{
+    width: 90%;
+    height: 200px;
+    border: 1px solid black
+}
+.back{
+    margin-left: 50px;
+    margin-top: 30px;
+    background-color: #012244;
+    color: white;
+}
+.edit{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
